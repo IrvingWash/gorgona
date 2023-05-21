@@ -10,7 +10,7 @@ module.exports = {
 		'jest.config.ts',
 		'dist',
 	],
-	plugins: ['@typescript-eslint/eslint-plugin'],
+	plugins: ['@typescript-eslint/eslint-plugin', 'react'],
 	root: true,
 	rules: {
 		'@typescript-eslint/explicit-function-return-type': ['error'],
@@ -30,5 +30,17 @@ module.exports = {
 		'space-before-function-paren': ['error', 'never'],
 		'keyword-spacing': ['error'],
 		'space-before-blocks': ['error'],
+		'newline-before-return': ['error'],
+		'jsx-quotes': ['error', 'prefer-single'],
+		'react/jsx-curly-spacing': [
+			'error',
+			{
+				'when': 'always',
+				'children': {
+					'when': 'always'
+				},
+			},
+		],
+		'react/jsx-tag-spacing': ['error'],
 	},
 };

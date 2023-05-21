@@ -23,7 +23,7 @@ export function PartsRack(props: PartsRackProps): JSX.Element {
 					<p>{ part.price }</p>
 					<p>{ part.manufacturer }</p>
 				</div>
-			))}
+			)) }
 		</div>
 	);
 }
