@@ -15,7 +15,7 @@
 		"test": "jest",
 		"lint": "eslint src/**/* --max-warnings=0",
 		"check-ts": "tsc --noEmit",
-		"build": "tsc",
+		"build": "tsc --project tsconfig.build.json",
 		"prepare": "husky install"
 	},
 	"author": "WI",
