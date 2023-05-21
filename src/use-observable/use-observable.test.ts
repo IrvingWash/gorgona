@@ -2,7 +2,12 @@
  * @jest-environment jsdom
  */
 
-import { describe, expect, it } from '@jest/globals';
+import {
+	describe,
+	expect,
+	it,
+} from '@jest/globals';
+
 import { act, renderHook } from '@testing-library/react';
 
 import { useObservable } from './use-observable';
