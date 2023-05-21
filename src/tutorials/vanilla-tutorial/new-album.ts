@@ -1,6 +1,6 @@
 import { Subject, Observable } from '../../';
 
-class Artist {
+export class Artist {
 	public discography$: Observable<string[]>;
 
 	private _discography$: Subject<string[]>;
@@ -15,7 +15,7 @@ class Artist {
 	}
 }
 
-class Fan {
+export class Fan {
 	public rejoiceBlissfully = (): void => {
 		console.log('YOSH!');
 	};
