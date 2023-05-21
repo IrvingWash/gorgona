@@ -21,9 +21,9 @@
 	"author": "WI",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/IrvingWash/observable/issues"
+		"url": "https://github.com/IrvingWash/gorgona/issues"
 	},
-	"homepage": "https://github.com/IrvingWash/observable#readme",
+	"homepage": "https://github.com/IrvingWash/gorgona#readme",
 	"dependencies": {
 		"react": "^18.2.0"
 	},
