@@ -1,4 +1,5 @@
 import {
+	beforeEach,
 	describe,
 	expect,
 	it,
@@ -7,13 +8,17 @@ import {
 import { Subject } from './subject';
 
 describe('Subject', () => {
+	let state = 0;
+
+	const observer = (): void => {
+		state++;
+	};
+
+	beforeEach(() => {
+		state = 0;
+	});
+
 	it('should trigger subscribed Observers when it\'s value is changed', () => {
-		let state = 0;
-
-		const observer = (): void => {
-			state++;
-		};
-
 		const subject = new Subject('zero');
 		subject.subscribe(observer);
 
@@ -23,12 +28,6 @@ describe('Subject', () => {
 	});
 
 	it('should not trigger Observers if the same primitive value is set safely', () => {
-		let state = 0;
-
-		const observer = (): void => {
-			state++;
-		};
-
 		const subject = new Subject('zero');
 		subject.subscribe(observer);
 
@@ -41,22 +40,16 @@ describe('Subject', () => {
 	});
 
 	it('should not notify unsubscribed Observers', () => {
-		let state = 0;
-
-		const observer1 = (): void => {
-			state++;
-		};
-
-		const observer2 = (): void => {
+		const anotherObserver = (): void => {
 			state += 2;
 		};
 
 		const subject = new Subject('zero');
 
-		subject.subscribe(observer1);
-		subject.subscribe(observer2);
+		subject.subscribe(observer);
+		subject.subscribe(anotherObserver);
 
-		subject.unsubscribe(observer1);
+		subject.unsubscribe(observer);
 
 		subject.setValue('one');
 
@@ -64,12 +57,6 @@ describe('Subject', () => {
 	});
 
 	it('should not trigger an Observer multiple times if the Observer was subscribed more than once', () => {
-		let state = 0;
-
-		const observer = (): void => {
-			state++;
-		};
-
 		const subject = new Subject('zero');
 
 		subject.subscribe(observer);
