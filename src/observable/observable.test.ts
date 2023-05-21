@@ -5,7 +5,7 @@ import {
 	it,
 } from '@jest/globals';
 
-import { Subject } from './subject';
+import { Subject } from '../subject/subject';
 
 describe('Observers', () => {
 	let state = 0;

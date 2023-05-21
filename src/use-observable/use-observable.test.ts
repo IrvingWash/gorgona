@@ -6,7 +6,7 @@ import { describe, expect, it } from '@jest/globals';
 import { act, renderHook } from '@testing-library/react';
 
 import { useObservable } from './use-observable';
-import { Subject } from './subject';
+import { Subject } from '../subject/subject';
 
 describe('Use Observable hook', () => {
 	describe('should update component state', () => {

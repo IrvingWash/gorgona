@@ -1,5 +1,5 @@
-import { Observable } from './observable';
-import { Observer } from './observer';
+import { Observable } from '../observable/observable';
+import { Observer } from '../observer/observer';
 
 export class Subject<T> {
 	private _value: T;

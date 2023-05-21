@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { Observable } from './observable';
+import { Observable } from '../observable/observable';
 
 export function useObservable<T>(observable$: Observable<T>, initialValue: T): T
 export function useObservable<T>(observable$: Observable<T>, initialValue?: T): T | undefined
