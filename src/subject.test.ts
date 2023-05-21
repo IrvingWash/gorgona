@@ -1,9 +1,13 @@
-import { describe, expect, it } from '@jest/globals';
+import {
+	describe,
+	expect,
+	it,
+} from '@jest/globals';
 
 import { Subject } from './subject';
 
 describe('Subject', () => {
-	it('should trigger subscribed observers when it\'s value is changed', () => {
+	it('should trigger subscribed Observers when it\'s value is changed', () => {
 		let state = 0;
 
 		const observer = (): void => {
@@ -18,7 +22,7 @@ describe('Subject', () => {
 		expect(state).toEqual(1);
 	});
 
-	it('should not trigger observers if the same primitive value is set safely', () => {
+	it('should not trigger Observers if the same primitive value is set safely', () => {
 		let state = 0;
 
 		const observer = (): void => {
@@ -36,7 +40,7 @@ describe('Subject', () => {
 		expect(state).toEqual(1);
 	});
 
-	it('should not notify unsubscirbed observers', () => {
+	it('should not notify unsubscribed Observers', () => {
 		let state = 0;
 
 		const observer1 = (): void => {
@@ -59,7 +63,7 @@ describe('Subject', () => {
 		expect(state).toEqual(2);
 	});
 
-	it('should not trigger an observer multiple times if the observer was subscribed more than once', () => {
+	it('should not trigger an Observer multiple times if the Observer was subscribed more than once', () => {
 		let state = 0;
 
 		const observer = (): void => {

@@ -1,3 +1,4 @@
+import { Observable } from './observable';
 import { Observer } from './observer';
 
 export class Subject<T> {
@@ -25,6 +26,10 @@ export class Subject<T> {
 		}
 
 		this.setValue(value);
+	}
+
+	public asObservable(): Observable<T> {
+		return new Observable(this);
 	}
 
 	public subscribe(observer: Observer<T>): void
