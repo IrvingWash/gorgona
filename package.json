@@ -1,6 +1,6 @@
 {
 	"name": "gorgona",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Minimal reactive toolset. With a React hook",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
