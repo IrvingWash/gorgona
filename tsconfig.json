@@ -11,7 +11,7 @@
 		"useDefineForClassFields": true,
 		"resolveJsonModule": true,
 		"allowJs": false,
-		"checkJs": true,
+		"checkJs": false,
 		"sourceMap": true,
 		"isolatedModules": true,
 		"allowSyntheticDefaultImports": true,
